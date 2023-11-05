@@ -22,7 +22,7 @@ public class Market implements QueueBehaviour, MarketBehaviour {
 
     @Override
     public void remPirson() {
-        System.out.println("Чедлвека убивают...");
+        System.out.println("Человека убивают...");
     }
 
     @Override
