@@ -1,37 +1,9 @@
 import java.util.*;
-
-public class StreamComparator {
-
-    private Integer id;
-    private String name;
-
-    public StreamComparator(String name) {
-        this.name = name;
-    }
-
-    public StreamComparator(Integer id) {
-        this.id = id;
-
-    }
-
+public class StreamComparator implements Comparator<Stream> {
+    // Переопределение метода compare() интерфейса Comparator
     @Override
-    public String toString() {
-        return "StreamComparator{"+"id="+id+",name='"+name+'}';
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
+    public int compare(Stream stream1, Stream stream2) {
+// Сравниваем количество Учебных Групп в потоках и возвращаем результат сравнения
+        return Integer.compare(stream1.educationalGroup.size(), stream2.educationalGroups.size());
     }
 }
