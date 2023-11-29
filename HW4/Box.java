@@ -8,7 +8,13 @@ public class Box<GB> {
         this.things = things;
         this.magic = magic;
     }
-
+    @Override
+    public String toString() {
+        return "Box{" +
+                "content=" + things +
+                ", description='" + magic + '\'' +
+                '}';
+    }
     public GB getThings() {
         return things;
     }
@@ -29,5 +35,7 @@ public class Box<GB> {
         GB things = box.getThings();
         String magic = box.getMagic();
         System.out.println("Test");
+
     }
+
 }
