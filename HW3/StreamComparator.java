@@ -4,6 +4,6 @@ public class StreamComparator implements Comparator<Stream> {
     @Override
     public int compare(Stream stream1, Stream stream2) {
 // Сравниваем количество Учебных Групп в потоках и возвращаем результат сравнения
-        return Integer.compare(stream1.educationalGroup.size(), stream2.educationalGroups.size());
+        return Integer.compare(stream1.educationalGroups.size(), stream2.educationalGroups.size());
     }
 }

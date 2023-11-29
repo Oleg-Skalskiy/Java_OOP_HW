@@ -1,7 +1,7 @@
 import java.util.*;
 
-public class Stream implements Iterable<EducationalGroup> {
-    private List<EducationalGroup> educationalGroups;
+public class Stream implements Iterable<StreamComparator> {
+    final List<StreamComparator> educationalGroups;
 
     // Конструктор класса Stream
     public Stream() {
@@ -9,13 +9,13 @@ public class Stream implements Iterable<EducationalGroup> {
     }
 
     // Метод для добавления Учебной Группы в поток
-    public void addGroup(EducationalGroup group) {
-        educationalGroups.add(group);
+    public <EducationalGroup> void addGroup(EducationalGroup group) {
+        educationalGroups.add((StreamComparator) group);
     }
 
     // Переопределение метода iterator() интерфейса Iterable
     @Override
-    public Iterator<EducationalGroup> iterator() {
+    public Iterator<StreamComparator> iterator() {
         return educationalGroups.iterator();
     }
 
